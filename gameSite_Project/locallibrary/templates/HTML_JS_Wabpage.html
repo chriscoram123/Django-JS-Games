@@ -1,0 +1,712 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--- ==== START HEAD FUNCTIONS ==== --->
+<!--- ==== START HEAD LIST ==== --->
+<!-- ONE: Providing links from outside souces or other files to improve development of web template -->
+<!--______END HEAD LIST______-->
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- CSS Static Links -->
+<link rel="stylesheet" href="/static/css/popUpDesign.css"/>
+
+<title>HTML/Javascript GamePage</title>
+<!-- ==== START LINK DESCRIPTION ==== -->
+ <!-- Area of head will be used to connect links regarding javascript/bootsrap as well as other outside sources -->
+ <!-- END LINK DESCRIPTION -->
+ <!--______________________-->
+ </head>
+<!--______END HEAD FUNCTIONS______-->
+
+<style>
+body {
+ background: #18181E;
+}
+
+button {
+ width: 200px;
+ height: 30px;
+ position: relative;
+ left: 40px;
+ top: 40px;
+}
+canvas {
+ border: solid black 1px;
+ background: brown;
+}
+
+
+.logo-div {
+ float: left;
+}
+.header-links {
+
+}
+.content-one {
+ float: left;
+ border: solid black 1px;
+ height: 200px;
+ width: 240px;
+ padding: 5px;
+ margin: 5px;
+}
+.content-one-title {
+
+}
+.content-one-p {
+
+}
+
+.footer {
+ background: green;
+ height: 100px;
+ width: 200px;
+}
+</style>
+
+<body>
+<div class="row">
+ <!-- Row 1 -->
+   <!-- Logo img -->
+    <div class="col-md-12">
+        <img src="" class="img-fluid" alt="Responsive image">
+    </div>
+<!-- Row 2 -->
+   <!-- Header links -->
+	<div class="col-md-6">
+		<center>
+		 <a href="">link</a>
+		 <a href="">link</a>
+	    </center>
+	</div>
+	<div class="col-md-6">
+		<center>
+		 <h1> dropdown menu </h1>
+	    </center>
+	</div>
+
+   <!-- Main content -->
+	<div class="col-md-6">
+	 <img class="content-one" src="" onclick="">
+	  <p class="content-one-title">Game title</p>
+	  <p class="content-one-p">Information</p>
+	  <br>
+	  </br>
+	  <button>
+	  	<a id="clickOne">Click here</a>
+	  </button>
+	  <!-- pop up -->
+     	<div id="myPopUpOne" class="popup1-background">
+     	<div class="popup1-content">
+		   <span class="closeOne">&times;</span>
+		    <div class="row">
+		    	<div class="col-md-6">
+		    		<center>
+		    		<canvas id="canvasOne">
+
+		    	    </canvas>
+		    	    </center>
+                </div>
+                <div class="col-md-6">
+                	<center>
+                	  <button><a onclick="startGame()"></a></button>
+                	</center>
+                </div>
+            </div>
+	    </div>
+	    </div>
+	  <!-- JS game one div -->
+	</div>
+	<div class="col-md-6">
+	 <img class="content-one" src="" onclick="">
+	  <p class="content-one-title">Game title</p>
+	  <p class="content-one-p">Information</p>
+	  <br>
+	  </br>
+	  <button>
+	  	<a id="clickTwo">Click here</a>
+	  </button>
+	   <!-- pop up -->
+     	<div id="myPopUpTwo" class="popup2-background">
+     	<div class="popup2-content">
+		   <span class="closeTwo">&times;</span>
+		    <div class="row">
+		    	<div class="col-md-6">
+		    		<center>
+		    		<canvas id="canvasTwo">
+
+		    	    </canvas>
+		            </center>
+                </div>
+            </div>
+	    </div>
+	    </div>
+	  <!-- JS game two div -->
+	</div>
+	<div class="col-md-6">
+	 <img class="content-one" src="" onclick="">
+	  <p class="content-one-title">Game title</p>
+	  <p class="content-one-p">Information</p>
+	  <br>
+	  </br>
+	  <button>
+	  	<a id="clickThree">Click here</a>
+	  </button>
+	   <!-- pop up -->
+     	<div id="myPopUpThree" class="popup3-background">
+     	<div class="popup3-content">
+		   <span class="closeThree">&times;</span>
+		     <div class="row">
+		     	<div class="col-md-6">
+		     		<center>
+		    		<canvas id="canvasThree">
+
+		    	    </canvas>
+		    	    </center>
+                </div>           
+            </div>
+	    </div>
+	    </div>
+	  <!-- JS game three div -->
+	</div>
+	<div class="col-md-6">
+	 <img class="content-one" src="" onclick="">
+	  <p class="content-one-title">Game title</p>
+	  <p class="content-one-p">Information</p>
+	  <br>
+	  </br>
+	  <button>
+	  	<a id="clickFour">Click here</a>
+	  </button>
+	   <!-- pop up -->
+     	<div id="myPopUpFour" class="popup4-background">
+     	<div class="popup4-content">
+		   <span class="closeFour">&times;</span>
+            <div class="row">
+            	<div class="col-md-6">
+            		<center>
+		    		<canvas id="canvasFour">
+
+		    	    </canvas>
+		    	    </center>
+                </div>
+            </div>
+	    </div>
+	    </div>
+	  <!-- JS game four div -->
+	</div>
+    
+<!-- Row 5 -->
+  <!-- Footer -->
+	<div class="col-md-4">
+	  <h1> hi </h1>
+	</div>
+
+	<div class="col-md-8">
+	   <h1> hi </h1>
+	</div>
+</div>
+<!-- Optional JavaScript -->
+ <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- JS Game Links -->
+<script src="GameOne.js"></script>
+<script src="GameTwo.js"></script>
+<script src="GameThree 2.js"></script>
+<script src="GameFour.js"></script>
+<script>
+// @author: Christopher S Coram
+// Car Retailer Website - Javascript
+// 10 - 16 - 2019 / 12:33 PM
+/*
+----------------------------------------------------------------------
+START GAME ONE
+*/
+
+// Onclick sets / runs game
+// Setup canvas...
+var canvas = document.getElementById("canvasOne");
+var ctx = canvas.getContext("2d");
+//...
+// Game object variables...
+// x y speed, width height, and radius values for moving ball
+var x = canvas.width/2;
+var y = canvas.height-30;
+var speedX = 2;
+var speedY = -2;
+var ballRadius = 15;
+
+// Values for paddle object
+var paddleHeight = 10;
+var paddleWidth = 75;
+var paddleX = (canvas.width-paddleWidth) / 2;
+var leftPressed = false;
+var rightPressed = false;
+
+document.addEventListener("keydown", keyDownHandler, false);
+document.addEventListener("keyup", keyUpHandler, false);
+
+function keyDownHandler(e) {
+    if(e.key == "Right" || e.key == "ArrowRight") {
+        rightPressed = true;
+    }
+    else if(e.key == "Left" || e.key == "ArrowLeft") {
+        leftPressed = true;
+    }
+}
+
+function keyUpHandler(e) {
+    if(e.key == "Right" || e.key == "ArrowRight") {
+        rightPressed = false;
+    }
+    else if(e.key == "Left" || e.key == "ArrowLeft") {
+        leftPressed = false;
+    }
+}
+
+
+// Id click for popup one
+var popup = document.getElementById("myPopUpOne");
+var btn = document.getElementById("clickOne");
+var span = document.getElementsByClassName("closeOne")[0];
+btn.onclick = function() {
+	alert("WARNING: ")
+   
+	popup.style.display = "block";
+
+	///////////////////////////////
+    ///// GAME LOOP FUNCTIONS /////
+    ///////////////////////////////
+    /* 
+    Draws object on canvas. Also gives object the ability
+	to change it's coordinates by two frames per second. -- update
+	*/
+
+	// Ball on canvas
+	function drawBall() {
+		ctx.beginPath();
+		ctx.arc(x,y,ballRadius,0,Math.PI*2);
+		ctx.fillStyle = "#0095DD";
+		ctx.fill();
+		ctx.closePath();
+        // Collision conditions for left wall, right wall, top wall
+        if(x + speedX > canvas.width-ballRadius || x + speedX < ballRadius) {
+        	speedX = -speedX;
+        }
+        if(y + speedY < ballRadius) {
+        	speedY = -speedY;
+        }
+        else if(y + speedY > canvas.height-ballRadius) {
+        	if(x > paddleX && x < paddleX + paddleWidth) {
+        		speedY = -speedY
+        	}
+        	else {
+        		alert("GAME OVER");
+        		document.location.reload();
+        		clearInterval(interval);
+        	}
+        }
+	}
+
+    // Objects on canvas
+	function objects() {
+		// Paddle objects
+		ctx.beginPath();
+		ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+		ctx.fillStyle = "#0095DD";
+        ctx.fill();
+        ctx.closePath();
+
+        if(rightPressed) {
+        paddleX += 7;
+        if (paddleX + paddleWidth > canvas.width) {
+            paddleX = canvas.width - paddleWidth;
+          }
+	    }
+	    else if(leftPressed) {
+	        paddleX -= 7;
+	        if (paddleX < 0) {
+	            paddleX = 0;
+	        }
+	    }
+
+	    // Ball movement
+	    x += speedX;
+	    y += speedY;
+	}
+
+    // Draws all objects on canvas
+	function draw() {
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+        drawBall();
+        objects();
+    }
+    
+    // Interval variable
+    var interval = setInterval(draw, 10);
+}
+
+span.onclick = function() {
+	popup.style.display = "none";
+}
+window.onclick = function() {
+	if(event.target == popup1) {
+		popup1.style.display = "none";
+		// exit game, window onclick...
+	}
+}	
+
+/*
+END GAME ONE
+----------------------------------------------------------------------
+START GAME TWO
+*/
+
+// Onclick sets / runs game
+// Setup canvas...
+var canvas = document.getElementById("canvasOne");
+var ctx = canvas.getContext("2d");
+//...
+// Game object variables...
+// x y speed, width height, and radius values for moving ball
+var x = canvas.width/2;
+var y = canvas.height-30;
+var speedX = 2;
+var speedY = -2;
+var ballRadius = 15;
+
+// Values for paddle object
+var paddleHeight = 10;
+var paddleWidth = 75;
+var paddleX = (canvas.width-paddleWidth) / 2;
+var leftPressed = false;
+var rightPressed = false;
+
+// Obstacle 1 variables
+var objectHeight = 10;
+var objectWidth = 30;
+var objX = 50;
+var objY = 50;
+var objectX = (canvas.width-objectWidth) / 2;
+
+// Obstacle 2 variables
+var objectHeight_Two = 10;
+var objectWidth_Two = 30;
+var objX_Two = 100;
+var objY_Two = 20;
+var objectX = (canvas.width-objectWidth) / 2;
+
+// Obstacle 3 variables
+var objectHeight_Three = 10;
+var objectWidth_Three = 30;
+var objX_Three = 25;
+var objY_Three = 10;
+var objectX = (canvas.width-objectWidth) / 2;
+
+// Obstacle 4 variables
+var objectHeight_Four = 10;
+var objectWidth_Four = 30;
+var objX_Four = 14;
+var objY_Four = 36;
+var objectX = (canvas.width-objectWidth) / 2;
+
+// Obstacle 5 variables
+var objectHeight_Five = 10;
+var objectWidth_Five = 30;
+var objX_Five = 27;
+var objY_Five = 12;
+var objectX = (canvas.width-objectWidth) / 2;
+//...
+
+// Id click for popup one two
+var popupTwo = document.getElementById("myPopUpTwo");
+var btn = document.getElementById("clickTwo");
+var span = document.getElementsByClassName("closeTwo")[0];
+btn.onclick = function() {
+	popupTwo.style.display = "block";
+}
+span.onclick = function() {
+	popupTwo.style.display = "none";
+
+	///////////////////////////////
+    ///// GAME LOOP FUNCTIONS /////
+    ///////////////////////////////
+    
+    
+    /* Draws object on canvas. Also gives object the ability
+	to change it's coordinates by two frames per second.
+	*/
+	// Nested functions
+	// Ball on canvas
+	function drawBall() {
+		ctx.beginPath();
+		ctx.arc(x,y,ballRadius,0,Math.PI*2);
+		ctx.fillStyle = "#0095DD";
+		ctx.fill();
+		ctx.closePath();
+		x += speedX;
+		y += speedY;
+	}
+    // Objects on canvas
+	function objects() {
+		// Paddle objects
+		ctx.beginPath();
+		ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+		ctx.fillStyle = "#0095DD";
+        ctx.fill();
+        ctx.closePath();
+
+        // Obstacle one
+        ctx.beginPath();
+        ctx.rect(objx, objy, objWidth, objeHeight);
+        ctx.fillStyle = "Blue";
+        ctx.fill();
+        ctx.closePath();
+
+        // Obstacle two
+        ctx.beginPath();
+        ctx.rect(objx_Two, objy_Two, objWidth_Two, objeHeight_Two);
+        ctx.fillStyle = "Blue";
+        ctx.fill();
+        ctx.closePath();
+
+        // Obstacle three
+        ctx.beginPath();
+        ctx.rect(objx_Three, objy_Three, objWidth_Three, objeHeight_Three);
+        ctx.fillStyle = "Blue";
+        ctx.fill();
+        ctx.closePath();
+
+        // Obstacle four
+        ctx.beginPath();
+        ctx.rect(objx_Four, objy_Four, objWidth_Four, objeHeight_Four);
+        ctx.fillStyle = "Blue";
+        ctx.fill();
+        ctx.closePath();
+
+        // Obstacle five
+        ctx.beginPath();
+        ctx.rect(objx_Five, objy_Five, objWidth_Five, objeHeight_Five);
+        ctx.fillStyle = "Blue";
+        ctx.fill();
+        ctx.closePath();
+	}
+
+    // Draws all objects on canvas
+	function draw() {
+       
+	}
+    
+	setInterval(draw, 10);
+}
+window.onclick = function() {
+	if(event.target == popup2) {
+		popup2.style.display = "none";
+	}
+}
+
+/*
+END GAME TWO
+----------------------------------------------------------------------
+START GAME THREE
+*/
+
+// Id click for popup one three
+var popupThree = document.getElementById("myPopUpThree");
+var btn = document.getElementById("clickThree");
+var span = document.getElementsByClassName("closeThree")[0];
+btn.onclick = function() {
+	popupThree.style.display = "block";
+
+	///////////////////////////////
+    ///// GAME LOOP FUNCTIONS /////
+    ///////////////////////////////
+    
+    
+    /* Draws object on canvas. Also gives object the ability
+	to change it's coordinates by two frames per second.
+	*/
+	// Nested functions
+	// Ball on canvas
+	function drawBall() {
+		ctx.beginPath();
+		ctx.arc(x,y,ballRadius,0,Math.PI*2);
+		ctx.fillStyle = "#0095DD";
+		ctx.fill();
+		ctx.closePath();
+		x += speedX;
+		y += speedY;
+	}
+    // Objects on canvas
+	function objects() {
+		// Paddle objects
+		ctx.beginPath();
+		ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+		ctx.fillStyle = "#0095DD";
+        ctx.fill();
+        ctx.closePath();
+
+        // Obstacle one
+        ctx.beginPath();
+        ctx.rect(objx, objy, objWidth, objeHeight);
+        ctx.fillStyle = "Blue";
+        ctx.fill();
+        ctx.closePath();
+
+        // Obstacle two
+        ctx.beginPath();
+        ctx.rect(objx_Two, objy_Two, objWidth_Two, objeHeight_Two);
+        ctx.fillStyle = "Blue";
+        ctx.fill();
+        ctx.closePath();
+
+        // Obstacle three
+        ctx.beginPath();
+        ctx.rect(objx_Three, objy_Three, objWidth_Three, objeHeight_Three);
+        ctx.fillStyle = "Blue";
+        ctx.fill();
+        ctx.closePath();
+
+        // Obstacle four
+        ctx.beginPath();
+        ctx.rect(objx_Four, objy_Four, objWidth_Four, objeHeight_Four);
+        ctx.fillStyle = "Blue";
+        ctx.fill();
+        ctx.closePath();
+
+        // Obstacle five
+        ctx.beginPath();
+        ctx.rect(objx_Five, objy_Five, objWidth_Five, objeHeight_Five);
+        ctx.fillStyle = "Blue";
+        ctx.fill();
+        ctx.closePath();
+	}
+
+    // Draws all objects on canvas
+	function draw() {
+      
+	}
+    
+	setInterval(draw, 10);
+}
+span.onclick = function() {
+	popupThree.style.display = "none";
+}
+window.onclick = function() {
+	if(event.target == popup3) {
+		popup3.style.display = "none";
+	}
+}
+
+/*
+END GAME THREE
+----------------------------------------------------------------------
+START GAME FOUR
+*/
+
+// Id click for popup one four
+var popupFour = document.getElementById("myPopUpFour");
+var btn = document.getElementById("clickFour");
+var span = document.getElementsByClassName("closeFour")[0];
+btn.onclick = function() {
+	popupFour.style.display = "block";
+
+	///////////////////////////////
+    ///// GAME LOOP FUNCTIONS /////
+    ///////////////////////////////
+    
+    
+    /* Draws object on canvas. Also gives object the ability
+	to change it's coordinates by two frames per second.
+	*/
+	// Nested functions
+	// Ball on canvas
+	function drawBall() {
+		ctx.beginPath();
+		ctx.arc(x,y,ballRadius,0,Math.PI*2);
+		ctx.fillStyle = "#0095DD";
+		ctx.fill();
+		ctx.closePath();
+		x += speedX;
+		y += speedY;
+	}
+    // Objects on canvas
+	function objects() {
+		// Paddle objects
+		ctx.beginPath();
+		ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+		ctx.fillStyle = "#0095DD";
+        ctx.fill();
+        ctx.closePath();
+
+        // Obstacle one
+        ctx.beginPath();
+        ctx.rect(objx, objy, objWidth, objeHeight);
+        ctx.fillStyle = "Blue";
+        ctx.fill();
+        ctx.closePath();
+
+        // Obstacle two
+        ctx.beginPath();
+        ctx.rect(objx_Two, objy_Two, objWidth_Two, objeHeight_Two);
+        ctx.fillStyle = "Blue";
+        ctx.fill();
+        ctx.closePath();
+
+        // Obstacle three
+        ctx.beginPath();
+        ctx.rect(objx_Three, objy_Three, objWidth_Three, objeHeight_Three);
+        ctx.fillStyle = "Blue";
+        ctx.fill();
+        ctx.closePath();
+
+        // Obstacle four
+        ctx.beginPath();
+        ctx.rect(objx_Four, objy_Four, objWidth_Four, objeHeight_Four);
+        ctx.fillStyle = "Blue";
+        ctx.fill();
+        ctx.closePath();
+
+        // Obstacle five
+        ctx.beginPath();
+        ctx.rect(objx_Five, objy_Five, objWidth_Five, objeHeight_Five);
+        ctx.fillStyle = "Blue";
+        ctx.fill();
+        ctx.closePath();
+	}
+
+    // Draws all objects on canvas
+	function draw() {
+     
+	}
+    
+	setInterval(draw, 10);
+
+}
+span.onclick = function() {
+	popupFour.style.display = "none";
+}
+window.onclick = function() {
+	if(event.target == popup4) {
+		popup4.style.display = "none";
+	}
+}
+
+/*
+END GAME FOUR
+----------------------------------------------------------------------
+START GAME FIVE
+*/
+
+//...
+
+
+</script>
+</body>
+</html>
