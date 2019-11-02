@@ -34,11 +34,28 @@ button {
  left: 40px;
  top: 40px;
 }
-canvas {
+.canvasOne {
  border: solid black 1px;
- background: brown;
+ background: #85fffb;
+}
+.canvasTwo {
+ background: #85ffa5;
+}
+.canvasThree {
+ background: ;
+}
+.canvasFour {
+ background: ;
 }
 
+#wrapper {
+ max-width: 500px;
+ margin: 0 auto;
+ margin-right: auto;
+ margin-left: auto;
+ padding-right: 10px;
+ padding-left: 10px;
+}
 
 .logo-div {
  float: left;
@@ -60,16 +77,34 @@ canvas {
 .content-one-p {
 
 }
+.p-in {
+ position: relative;
+ top: 60px;
+ left: 0px;
+}
+.startGameBtn {
+ position: relative;
+ top: 0px;
+ left: 0px;
+}
+.instructions {
+ border: solid black 2px;
+ height: 490px;
+}
 
 .footer {
  background: green;
  height: 100px;
  width: 200px;
 }
+.copy-info {
+ position: relative;
+ top: 30px;
+}
 </style>
 
 <body>
-<div class="row">
+<div class="row"> <!-- Sets Up Bootstrap Rows -->
  <!-- Row 1 -->
    <!-- Logo img -->
     <div class="col-md-12">
@@ -100,24 +135,33 @@ canvas {
 	  	<a id="clickOne">Click here</a>
 	  </button>
 	  <!-- pop up -->
+	    <!-- Content setup for popup div -->
      	<div id="myPopUpOne" class="popup1-background">
      	<div class="popup1-content">
+     	   <!-- Main content -->
 		   <span class="closeOne">&times;</span>
+		   <div class="col-md-12"> <h1> title </h1> </div>
 		    <div class="row">
+		    	<!-- HTML / JS game display -->
 		    	<div class="col-md-6">
 		    		<center>
-		    		<canvas id="canvasOne">
-
-		    	    </canvas>
+		    		<canvas id="canvasOne" class="canvasOne" height="480px" width="490px"> </canvas>
 		    	    </center>
                 </div>
-                <div class="col-md-6">
+                <!-- Game instructions -->
+                <div class="col-md-6">    
+                 <div class="instructions">          
                 	<center>
-                	  <button><a onclick="startGame()"></a></button>
+                	  <p class="p-in">INSTRUCTIONS: .... </p>
                 	</center>
+                 </div>
                 </div>
             </div>
-	    </div>
+            <!-- Start game btn -->
+            <div class="col-md-4"> <button class="startGameBtn"><a onclick="startGame()">Start Game</a></button> </div>
+            <!-- Copyright Info -->
+            <div class="col-md-8"> <p class="copy-info"> Info</p> </div>
+        </div>
 	    </div>
 	  <!-- JS game one div -->
 	</div>
@@ -131,18 +175,31 @@ canvas {
 	  	<a id="clickTwo">Click here</a>
 	  </button>
 	   <!-- pop up -->
+	    <!-- Content setup for popup div -->
      	<div id="myPopUpTwo" class="popup2-background">
      	<div class="popup2-content">
-		   <span class="closeTwo">&times;</span>
+     	   <!-- Main content -->
+		   <span class="closeThree">&times;</span>
 		    <div class="row">
+		    	<!-- HTML / JS game display -->
 		    	<div class="col-md-6">
 		    		<center>
-		    		<canvas id="canvasTwo">
-
-		    	    </canvas>
+		    		<canvas id="canvasTwo" class="canvasTwo" height="480px" width="490px"></canvas>
 		            </center>
                 </div>
+                <!-- Game instructions -->
+                <div class="col-md-6">    
+                 <div class="instructions">          
+                	<center>
+                	  <p class="p-in">INSTRUCTIONS: .... </p>
+                	</center>
+                 </div>
+                </div>
             </div>
+            <!-- Start game btn -->
+            <div class="col-md-4"> <button class="startGameBtn"><a onclick="startGame()">Start Game</a></button> </div>
+            <!-- Copyright Info -->
+            <div class="col-md-8"> <p class="copy-info"> Info</p> </div>
 	    </div>
 	    </div>
 	  <!-- JS game two div -->
@@ -157,18 +214,31 @@ canvas {
 	  	<a id="clickThree">Click here</a>
 	  </button>
 	   <!-- pop up -->
+	    <!-- Content setup for popup div -->
      	<div id="myPopUpThree" class="popup3-background">
      	<div class="popup3-content">
-		   <span class="closeThree">&times;</span>
+     	   <!-- Main content -->
+		   <span class="closeFour">&times;</span>
 		     <div class="row">
+		     	<!-- HTML / JS game display -->
 		     	<div class="col-md-6">
 		     		<center>
-		    		<canvas id="canvasThree">
-
-		    	    </canvas>
+		    		<canvas id="canvasThree" class="canvasThree" height="480px" width="490px"></canvas>
 		    	    </center>
-                </div>           
+                </div>    
+                <!-- Game instructions -->
+                <div class="col-md-6">    
+                 <div class="instructions">          
+                	<center>
+                	  <p class="p-in">INSTRUCTIONS: .... </p>
+                	</center>
+                 </div>
+                </div>       
             </div>
+            <!-- Start game btn -->
+            <div class="col-md-4"> <button class="startGameBtn"><a onclick="startGame()">Start Game</a></button> </div>
+            <!-- Copyright Info -->
+            <div class="col-md-8"> <p class="copy-info"> Info</p> </div>
 	    </div>
 	    </div>
 	  <!-- JS game three div -->
@@ -183,17 +253,31 @@ canvas {
 	  	<a id="clickFour">Click here</a>
 	  </button>
 	   <!-- pop up -->
+	    <!-- Content setup for popup div -->
      	<div id="myPopUpFour" class="popup4-background">
      	<div class="popup4-content">
+     	   <!-- Main content -->
 		   <span class="closeFour">&times;</span>
             <div class="row">
+            	<!-- HTML / JS game display -->
             	<div class="col-md-6">
             		<center>
-		    		<canvas id="canvasFour">
-
-		    	    </canvas>
+		    		<canvas id="canvasFour" class="canvasFour" height="480px" width="490px"></canvas>
 		    	    </center>
                 </div>
+                <!-- Game instructions -->
+                <div class="col-md-6">    
+                 <div class="instructions">          
+                	<center>
+                	  <p class="p-in">INSTRUCTIONS: .... </p>
+                	</center>
+                 </div>
+                </div>       
+            </div>
+            <!-- Start game btn -->
+            <div class="col-md-4"> <button class="startGameBtn"><a onclick="startGame()">Start Game</a></button> </div>
+            <!-- Copyright Info -->
+            <div class="col-md-8"> <p class="copy-info"> Info</p> </div>
             </div>
 	    </div>
 	    </div>
@@ -234,7 +318,8 @@ START GAME ONE
 var canvas = document.getElementById("canvasOne");
 var ctx = canvas.getContext("2d");
 //...
-// Game object variables...
+
+// Game One object variables...
 // x y speed, width height, and radius values for moving ball
 var x = canvas.width/2;
 var y = canvas.height-30;
@@ -249,9 +334,10 @@ var paddleX = (canvas.width-paddleWidth) / 2;
 var leftPressed = false;
 var rightPressed = false;
 
+// Event listeners for keyboard
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
-
+// key down / up handlers will change states from true to false...
 function keyDownHandler(e) {
     if(e.key == "Right" || e.key == "ArrowRight") {
         rightPressed = true;
@@ -276,16 +362,20 @@ var popup = document.getElementById("myPopUpOne");
 var btn = document.getElementById("clickOne");
 var span = document.getElementsByClassName("closeOne")[0];
 btn.onclick = function() {
-	alert("WARNING: ")
+	alert("WARNING: EPILEPSY...")
    
 	popup.style.display = "block";
 
+	// Onclick button starting game
+	/*
+      All code written within the btn function automatically activates, 
+      only responding to user action.
+    */
 	///////////////////////////////
     ///// GAME LOOP FUNCTIONS /////
     ///////////////////////////////
-    /* 
-    Draws object on canvas. Also gives object the ability
-	to change it's coordinates by two frames per second. -- update
+    /*
+    Draws objects on canavs and laysout operational commands.
 	*/
 
 	// Ball on canvas
@@ -354,6 +444,7 @@ btn.onclick = function() {
 
 span.onclick = function() {
 	popup.style.display = "none";
+	// Exit Game
 }
 window.onclick = function() {
 	if(event.target == popup1) {
@@ -367,147 +458,151 @@ END GAME ONE
 ----------------------------------------------------------------------
 START GAME TWO
 */
+// Setup canvas
+var canvasTwo = document.getElementById("canvasTwo");
+var ctxTwo = canvasTwo.getContext("2d");
 
-// Onclick sets / runs game
-// Setup canvas...
-var canvas = document.getElementById("canvasOne");
-var ctx = canvas.getContext("2d");
-//...
-// Game object variables...
+// Game Two object variables...
 // x y speed, width height, and radius values for moving ball
-var x = canvas.width/2;
-var y = canvas.height-30;
-var speedX = 2;
-var speedY = -2;
-var ballRadius = 15;
+var x_GT = canvasTwo.width/2;
+var y_GT = canvasTwo.height-30;
+var speedX_GT = 2;
+var speedY_GT = -2;
+var ballRadius_GT = 15;
 
 // Values for paddle object
-var paddleHeight = 10;
-var paddleWidth = 75;
-var paddleX = (canvas.width-paddleWidth) / 2;
-var leftPressed = false;
-var rightPressed = false;
+var paddleHeight_GT = 10;
+var paddleWidth_GT = 75;
+var paddleX_GT = (canvasTwo.width-paddleWidth_GT) / 2;
+var leftPressed_GT = false;
+var rightPressed_GT = false;
 
 // Obstacle 1 variables
 var objectHeight = 10;
 var objectWidth = 30;
 var objX = 50;
 var objY = 50;
-var objectX = (canvas.width-objectWidth) / 2;
+var objectX = (canvasTwo.width-objectWidth) / 2;
 
 // Obstacle 2 variables
 var objectHeight_Two = 10;
 var objectWidth_Two = 30;
 var objX_Two = 100;
 var objY_Two = 20;
-var objectX = (canvas.width-objectWidth) / 2;
+var objectX = (canvasTwo.width-objectWidth) / 2;
 
 // Obstacle 3 variables
 var objectHeight_Three = 10;
 var objectWidth_Three = 30;
 var objX_Three = 25;
 var objY_Three = 10;
-var objectX = (canvas.width-objectWidth) / 2;
+var objectX = (canvasTwo.width-objectWidth) / 2;
 
 // Obstacle 4 variables
 var objectHeight_Four = 10;
 var objectWidth_Four = 30;
 var objX_Four = 14;
 var objY_Four = 36;
-var objectX = (canvas.width-objectWidth) / 2;
+var objectX = (canvasTwo.width-objectWidth) / 2;
 
 // Obstacle 5 variables
 var objectHeight_Five = 10;
 var objectWidth_Five = 30;
 var objX_Five = 27;
 var objY_Five = 12;
-var objectX = (canvas.width-objectWidth) / 2;
+var objectX = (canvasTwo.width-objectWidth) / 2;
 //...
 
 // Id click for popup one two
 var popupTwo = document.getElementById("myPopUpTwo");
-var btn = document.getElementById("clickTwo");
-var span = document.getElementsByClassName("closeTwo")[0];
-btn.onclick = function() {
+var btnTwo = document.getElementById("clickTwo");
+var spanTwo = document.getElementsByClassName("closeTwo")[0];
+btnTwo.onclick = function() {
 	popupTwo.style.display = "block";
-}
-span.onclick = function() {
-	popupTwo.style.display = "none";
 
+    // Onclick button starting game
+	/*
+      All code written within the btn function automatically activates, 
+      only responding to user action.
+    */
 	///////////////////////////////
     ///// GAME LOOP FUNCTIONS /////
     ///////////////////////////////
-    
-    
-    /* Draws object on canvas. Also gives object the ability
-	to change it's coordinates by two frames per second.
+    /*
+    Draws objects on canavs and laysout operational commands.
 	*/
-	// Nested functions
+
 	// Ball on canvas
 	function drawBall() {
-		ctx.beginPath();
-		ctx.arc(x,y,ballRadius,0,Math.PI*2);
-		ctx.fillStyle = "#0095DD";
-		ctx.fill();
-		ctx.closePath();
-		x += speedX;
-		y += speedY;
+		ctxTwo.beginPath();
+		ctxTwo.arc(x_GT,y_GT,ballRadius_GT,0,Math.PI*2);
+		ctxTwo.fillStyle = "#0095DD";
+		ctxTwo.fill();
+		ctxTwo.closePath();
+		x_GT += speedX_GT;
+		y_GT += speedY_GT;
 	}
     // Objects on canvas
 	function objects() {
 		// Paddle objects
-		ctx.beginPath();
-		ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-		ctx.fillStyle = "#0095DD";
-        ctx.fill();
-        ctx.closePath();
+		ctxTwo.beginPath();
+		ctxTwo.rect(paddleX_GT, canvas.height-paddleHeight_GT, paddleWidth_GT, paddleHeight_GT);
+		ctxTwo.fillStyle = "#0095DD";
+        ctxTwo.fill();
+        ctxTwo.closePath();
 
         // Obstacle one
-        ctx.beginPath();
-        ctx.rect(objx, objy, objWidth, objeHeight);
-        ctx.fillStyle = "Blue";
-        ctx.fill();
-        ctx.closePath();
+        ctxTwo.beginPath();
+        ctxTwo.rect(objx, objy, objWidth, objeHeight);
+        ctxTwo.fillStyle = "Blue";
+        ctxTwo.fill();
+        ctxTwo.closePath();
 
         // Obstacle two
-        ctx.beginPath();
-        ctx.rect(objx_Two, objy_Two, objWidth_Two, objeHeight_Two);
-        ctx.fillStyle = "Blue";
-        ctx.fill();
-        ctx.closePath();
+        ctxTwo.beginPath();
+        ctxTwo.rect(objx_Two, objy_Two, objWidth_Two, objeHeight_Two);
+        ctxTwo.fillStyle = "Blue";
+        ctxTwo.fill();
+        ctxTwo.closePath();
 
         // Obstacle three
-        ctx.beginPath();
-        ctx.rect(objx_Three, objy_Three, objWidth_Three, objeHeight_Three);
-        ctx.fillStyle = "Blue";
-        ctx.fill();
-        ctx.closePath();
+        ctxTwo.beginPath();
+        ctxTwo.rect(objx_Three, objy_Three, objWidth_Three, objeHeight_Three);
+        ctxTwo.fillStyle = "Blue";
+        ctxTwo.fill();
+        ctxTwo.closePath();
 
         // Obstacle four
-        ctx.beginPath();
-        ctx.rect(objx_Four, objy_Four, objWidth_Four, objeHeight_Four);
-        ctx.fillStyle = "Blue";
-        ctx.fill();
-        ctx.closePath();
+        ctxTwo.beginPath();
+        ctxTwo.rect(objx_Four, objy_Four, objWidth_Four, objeHeight_Four);
+        ctxTwo.fillStyle = "Blue";
+        ctxTwo.fill();
+        ctxTwo.closePath();
 
         // Obstacle five
-        ctx.beginPath();
-        ctx.rect(objx_Five, objy_Five, objWidth_Five, objeHeight_Five);
-        ctx.fillStyle = "Blue";
-        ctx.fill();
-        ctx.closePath();
+        ctxTwo.beginPath();
+        ctxTwo.rect(objx_Five, objy_Five, objWidth_Five, objeHeight_Five);
+        ctxTwo.fillStyle = "Blue";
+        ctxTwo.fill();
+        ctxTwo.closePath();
 	}
 
     // Draws all objects on canvas
 	function draw() {
-       
+	   ctxTwo.clearRect(0,0,canvas.width,canvas.height);
+       drawBall()
+       objects()
 	}
     
 	setInterval(draw, 10);
 }
+spanTwo.onclick = function() {
+	popupTwo.style.display = "none";
+	// Exit Game
+}
 window.onclick = function() {
 	if(event.target == popup2) {
-		popup2.style.display = "none";
+		popupTwo.style.display = "none";
 	}
 }
 
