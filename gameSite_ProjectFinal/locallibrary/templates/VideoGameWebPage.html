@@ -1,0 +1,261 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!-- ==== START HEAD ==== -->
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- CSS Static Links -->
+<link rel="stylesheet" href="/static/css/Homepage.css" />
+</head>
+<!--______END HEAD ______-->
+
+
+<!-- ==== START BODY ==== -->
+<body>
+<!-- ==== START NAV BAR ==== -->
+<div class="container">
+<!-- Navbar Setup -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<a class="navbar-brand" href="#">CompanyName</a>
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+	<span class="navbar-toggler-icon"></span>
+</button>
+<!-- Nav Bar Content-->
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+	<ul class="navbar-nav ml-auto">
+		<li class="nav-item">
+			<a class="nav-link" href="#">Home</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#">About</a>
+		</li>
+		<li class="nav-item dropdown">
+			<a class="nav-link" href="#" id="navbarDropdown" data-toggle="dropdown">Products</a>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#">Product 1</a>
+				<a class="dropdown-item" href="#">Product 1</a>
+				<div class="dropdown-divider">  </div>
+				<a class="dropdown-item" href="#">Product 1</a>
+			</div>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#">Contact</a>
+		</li>
+	</ul>
+</div>
+</nav>
+<!--______END NAVBAR ______-->
+
+
+<!-- ==== START JUMBOTRON ONE ==== -->
+<!-- Section One -->
+<div class="jumbotron">
+	<p class="lead">HTML / JS Games: All links provided below will allow user to access games </p>
+	 <div class="row">
+	 	<div class="col">
+         <div class="card text-center">
+         	<!-- Img js will expand img onclick -->
+            <img src="/static/css/scr.jpg" class="img-thumbnail" onclick="imgOne()">
+            <p class="lead">Mini Paddle Games</p>
+            <button type="button" class="btn btn-outline-primary" id="One"><a href="#" id="One">Game Site</a></button>
+             <!-- Onclick Popup Img -->
+             <!-- Popup img setup -->
+             <div id="upOne" class="popup1-background">
+     	     <div class="popup1-content">
+                <!-- Main Content -->
+                <div class="container">
+                  <div class="col">
+                    <span class="close">&times;</span>
+                     <div class="card text-center">
+                       <center>
+                       <p class="lead"> Header </p>
+                        <img src="/static/css/scr.jpg" class="drop-image1" height="200px" width="200px" class=""/>
+                       <p class="description1"> DESCRIPTION: </p>
+                       <p class="description1-1"> nidnwiodnwqin</p>
+                       <button type="button" class="btn btn-primary" onclick="gamePageOne()">Click Here</button>
+                       </center>
+                     </div>
+                  </div>
+                </div>
+              </div>
+             </div>
+             <!-- END POP UP CONTENT SETUP -->
+         </div>	
+        </div>
+        <!-- END SECTION ONE -->
+
+
+        <!-- START SECTION TWO -->
+        <div class="col">
+         <div class="card text-center">
+         	<!-- Img js will expand img onclick -->
+            <img src="/static/css/scr3.png" class="img-thumbnail" onclick="imgTwo()"/>
+            <p class="lead">Mini Maneuver Game</p>
+            <button type="button" class="btn btn-outline-primary" id="Two">Play Game</button>
+             <!-- Onclick Popup Img -->
+             <!-- Popup img setup -->
+             <div id="upTwo" class="popup1-background">
+     	     <div class="popup1-content">
+                <!-- Main Content -->
+                <div class="container">
+                  <div class="col">
+                    <span class="closeTwo">&times;</span>
+                     <div class="card text-center">
+                       <center>
+                       <p class="lead"> Header </p>
+                        <img src="/static/css/scr3.png" class="drop-image1" height="200px" width="200px" class=""/>
+                       <p class="description1"> DESCRIPTION: </p>
+                       <p class="description1-1"> nidnwiodnwqin</p>
+                       <button type="button" class="btn btn-primary" onclick="gamePageTwo()">Continue</button>
+                       </center>
+                     </div>
+                  </div>
+                </div>
+              </div>
+             </div>
+             <!-- END POP UP CONTENT SETUP -->
+         </div>	
+        </div>
+        <!-- END SECTION TWO -->
+	 </div>
+</div>
+<!--______ END JUMBOTRON ONE ______-->
+
+
+<!-- ==== START JUMBOTRON TWO ==== -->
+<div class="jumbotron">
+ <p class="lead">Python PyGames: Recommend that user download pygame in terminal to play.</p>
+  <div class="row">
+    <div class="col">
+         <div class="card text-center">
+         	<!-- Img js will expand img onclick -->
+            <img src="/static/css/scr2.png" class="img-thumbnail">
+            <p class="lead">Starship Pygame</p>
+            <button type="button" id="pygame" class="btn btn-outline-primary">    <a href="https://github.com/chriscoram123/Python-Space-Game/tree/master/Level%20One">Download Files</a></button>
+         </div>	
+        </div>
+  </div>
+</div>
+<!--______ END JUMBOTRON TWO ______-->
+
+
+<!-- ==== START JUMBOTRON THREE ==== -->
+<!-- Jumbotron Three -->
+<div class="jumbotron">
+ <p class="lead">Python Trivia Games: Click on button to play terminal python games.</p>
+ <div class="row">
+  <!-- Each button will link to a project uploaded on Christopher Coram's github account -->
+  <button type="button" class="btn col-sm-12 col-md-4 btn-outline-primary" id="downloadMath"><a href="https://github.com/chriscoram123/Pyhton-Projects-2019/tree/master/Math/Math%20Triva%20Game">Download Math Trivia Files</a> </button>
+  <button type="button" class="btn col-sm-12 col-md-4 btn-outline-primary" id="downloadNature"><a href="https://github.com/chriscoram123/Pyhton-Projects-2019/tree/master/Nature%20Tivia%20Game">Download Nature Trivia Files</a></button>
+  <button type="button" class="btn col-sm-12 col-md-4 btn-outline-primary" id="downloadEnglish">Download English Trivia Files</button>
+ </div>
+ <!--______ END JUMBOTRON THREE ______-->
+
+
+<!-- ==== START JUMBOTRON FOUR ==== -->
+<!-- Footer -->
+<div class="footer">
+  <div class="container">
+   <div class="row">
+   <h1 class="col-sm-12"> heading </h1>
+    <p class="lead col-sm-6"> Text will go here ... text will go here</p>
+    <!-- Footer Card -->
+     <div class="card col-sm-6 text-center">
+     	<img class="footer-img" src="">
+     	<p class="lead"> text </p>
+     </div>
+     <p class="col-md-8">hello.........</p>
+   </div>
+  </div>
+  <!--______ END JUMBOTRON fOUR ______-->
+ </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+/*
+ Created by: Christopher S Coram
+ Created on: 11042019
+*/
+
+// popup variable 
+var btn = document.getElementById("One");
+var popup = document.getElementById("upOne");
+var span = document.getElementsByClassName("close")[0];
+
+// popup one...
+btn.onclick = function() {
+	popup.style.display = "block";
+}
+span.onclick = function() {
+	popup.style.display = "none";
+}
+window.onclick = function() {
+	if(event.target == popup) {
+		popup.style.display = "none";
+	}
+}
+// popup onclick for img-thumbnail
+function imgOne() {
+	popup.style.display = "block";
+    span.onclick = function() {
+    	popup.style.display = "none";
+    }
+    window.onclick = function() {
+	if(event.target == popup) {
+		popup.style.display = "none";
+	}
+  }
+}
+//...
+
+// popup variable...
+var btnTwo = document.getElementById("Two");
+var popupTwo = document.getElementById("upTwo");
+var spanTwo = document.getElementsByClassName("closeTwo")[0];
+
+// popup two...
+btnTwo.onclick = function() {
+	popupTwo.style.display = "block";
+}
+    popupTwo.style.display = "none";
+spanTwo.onclick = function() {
+}
+window.onclick = function() {
+	if(event.target == popupTwo) {
+		popupTwo.style.display = "none";
+	}
+}
+// popup onclick from img-thumbnail
+function imgTwo() {
+	popupTwo.style.display = "block";
+	spanTwo.onclick = function() {
+		popupTwo.style.display = "none";
+	}
+	window.onclick = function() {
+		popupTwo.style.display = "none";
+	}
+}
+//...
+
+// url link for popup one
+function gamePageOne() {
+  window.location.assign("http://127.0.0.1:8000/MiniGameSite");
+}
+
+// url link for popup two
+function gamePageTwo() {
+  window.location.assign("http://127.0.0.1:8000/JS/HTMLGame");
+}
+
+</script>
+</body>
+<!--______END BODY______-->
+</html>

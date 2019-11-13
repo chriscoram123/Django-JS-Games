@@ -1,0 +1,11 @@
+canvas {
+    background: url("/static/css/brown-soil-texture-background_1308-20483.jpg");
+    display: block;
+    margin: 0 auto;
+}
+h1 {
+ color: red;
+}
+h2 {
+ color: green;
+}
